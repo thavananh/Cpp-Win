@@ -1643,83 +1643,86 @@ void Print_Empty_Isoceles_Triagle_Rotate_Down();
 int main() {
     int Choice;
     printf_s("Chào mừng tới Big Program");
-    printf_s("\n***************************************************");
-    printf_s("\n*1. Tính tổng, hiệu, tích, thương                 *");
-    printf_s("\n*2. Tính chu vi, diện tích hình tròn              *");
-    printf_s("\n*3. Tính khoảng cách vecto                        *");
-    printf_s("\n*4. Chuyển đổi đơn vị đo C và F                   *");
-    printf_s("\n*5. Tìm giá trị tuyệt đối của số nguyên           *");
-    printf_s("\n*6. Luỹ Thừa                                      *");
-    printf_s("\n*7. Tìm căn bậc 2                                 *");
-    printf_s("\n*8. tính tổng tăng dần Sn = 1 + 2 + 3 + ... + n   *");
-    printf_s("\n*9. Tính tổng luỹ thừa 2 tăng dần                 *");
-    printf_s("\n*10. Tính tổng tăng dần phân số                   *");
-    printf_s("\n*11. Tính Tổng nhân tăng dần                      *");
-    printf_s("\n*12. Tính tổng luỹ thừa có âm tăng dần            *");
-    printf_s("\n*13. Tìm số chia hết lớn nhất                     *");
-    printf_s("\n*14. Số chia hết nhỏ nhất                         *");
-    printf_s("\n*15. Kiểm tra số chẵn lẻ                          *");
-    printf_s("\n*16. Kiểm tra số chia hết cho 3 và 5              *");
-    printf_s("\n*17. Kiểm tra năm nhuận                           *");
-    printf_s("\n*18. In ra số ngày của tháng                      *");
-    printf_s("\n*19. Kiểm tra chữ in thường                       *");
-    printf_s("\n*20. Kiểm tra chữ in hoa                          *");
-    printf_s("\n*21. Kiểm tra chữ cái                             *");
-    printf_s("\n*22. Kiểm tra chữ số                              *");
-    printf_s("\n*23. Chuyển ký tự in hoa thành in thường          *");
-    printf_s("\n*24. Chuyển ký tự in thường thành in hoa          *");
-    printf_s("\n*25. Chữ cái kế tiếp                              *");
-    printf_s("\n*26. Số lớn số nhỏ                                *");
-    printf_s("\n*27. Tam giác hợp lệ                              *");
-    printf_s("\n*28. Kiểm tra tam giác                            *");
-    printf_s("\n*29. Chuyển đổi ngày sang tháng, năm, ngày        *");
-    printf_s("\n*30. Phương trình bậc 2                           *");
-    printf_s("\n*31. Xác định số nguyên tố                        *");
-    printf_s("\n*31. Tìm GCD (UCLN)                               *");
-    printf_s("\n*32. In ra các hình 2d với *                      *");
+    printf_s("\n**************************************************************");
+    printf_s("\n*1. Tính tổng, hiệu, tích, thương                            *");
+    printf_s("\n*2. Tính chu vi, diện tích hình tròn                         *");
+    printf_s("\n*3. Tính khoảng cách vecto                                   *");
+    printf_s("\n*4. Chuyển đổi đơn vị đo C và F                              *");
+    printf_s("\n*5. Tìm giá trị tuyệt đối của số nguyên                      *");
+    printf_s("\n*6. Luỹ Thừa                                                 *");
+    printf_s("\n*7. Tìm căn bậc 2                                            *");
+    printf_s("\n*8. tính tổng tăng dần Sn = 1 + 2 + 3 + ... + n              *");
+    printf_s("\n*9. Tính tổng luỹ thừa 2 tăng dần                            *");
+    printf_s("\n*10. Tính tổng tăng dần phân số                              *");
+    printf_s("\n*11. Tính Tổng nhân tăng dần                                 *");
+    printf_s("\n*12. Tính tổng luỹ thừa có âm tăng dần                       *");
+    printf_s("\n*13. Tìm số chia hết lớn nhất                                *");
+    printf_s("\n*14. Số chia hết nhỏ nhất                                    *");
+    printf_s("\n*15. Kiểm tra số chẵn lẻ                                     *");
+    printf_s("\n*16. Kiểm tra số chia hết cho 3 và 5                         *");
+    printf_s("\n*17. Kiểm tra năm nhuận                                      *");
+    printf_s("\n*18. In ra số ngày của tháng                                 *");
+    printf_s("\n*19. Kiểm tra chữ in thường                                  *");
+    printf_s("\n*20. Kiểm tra chữ in hoa                                     *");
+    printf_s("\n*21. Kiểm tra chữ cái                                        *");
+    printf_s("\n*22. Kiểm tra chữ số                                         *");
+    printf_s("\n*23. Chuyển ký tự in hoa thành in thường                     *");
+    printf_s("\n*24. Chuyển ký tự in thường thành in hoa                     *");
+    printf_s("\n*25. Chữ cái kế tiếp                                         *");
+    printf_s("\n*26. Số lớn số nhỏ                                           *");
+    printf_s("\n*27. Tam giác hợp lệ                                         *");
+    printf_s("\n*28. Kiểm tra tam giác                                       *");
+    printf_s("\n*29. Chuyển đổi ngày sang tháng, năm, ngày                   *");
+    printf_s("\n*30. Phương trình bậc 2                                      *");
+    printf_s("\n*31. Xác định số nguyên tố                                   *");
+    printf_s("\n*31. Tìm GCD (UCLN)                                          *");
+    printf_s("\n*32. In ra các hình 2d với *                                 *");
+    printf_s("\n*33. In ra list của bình phương và lập phương của số nhập vào*");
     printf_s("\n***************************************************");
     printf_s("\nXin mời nhập lựa chọn = ");
     scanf_s("%d", &Choice);
-    if (Choice <= 0 || Choice > 32)
+    if (Choice <= 0 || Choice > 33)
     {
-        while (Choice <= 0 || Choice > 32)
+        while (Choice <= 0 || Choice > 33)
         {
-            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
-            printf_s("\n***************************************************");
-            printf_s("\n*1. Tính tổng, hiệu, tích, thương                 *");
-            printf_s("\n*2. Tính chu vi, diện tích hình tròn              *");
-            printf_s("\n*3. Tính khoảng cách vecto                        *");
-            printf_s("\n*4. Chuyển đổi đơn vị đo C và F                   *");
-            printf_s("\n*5. Tìm giá trị tuyệt đối của số nguyên           *");
-            printf_s("\n*6. Luỹ Thừa                                      *");
-            printf_s("\n*7. Tìm căn bậc 2                                 *");
-            printf_s("\n*8. tính tổng tăng dần Sn = 1 + 2 + 3 + ... + n   *");
-            printf_s("\n*9. Tính tổng luỹ thừa 2 tăng dần                 *");
-            printf_s("\n*10. Tính tổng tăng dần phân số                   *");
-            printf_s("\n*11. Tính Tổng nhân tăng dần                      *");
-            printf_s("\n*12. Tính tổng luỹ thừa có âm tăng dần            *");
-            printf_s("\n*13. Tìm số chia hết lớn nhất                     *");
-            printf_s("\n*14. Số chia hết nhỏ nhất                         *");
-            printf_s("\n*15. Kiểm tra số chẵn lẻ                          *");
-            printf_s("\n*16. Kiểm tra số chia hết cho 3 và 5              *");
-            printf_s("\n*17. Kiểm tra năm nhuận                           *");
-            printf_s("\n*18. In ra số ngày của tháng                      *");
-            printf_s("\n*19. Kiểm tra chữ in thường                       *");
-            printf_s("\n*20. Kiểm tra chữ in hoa                          *");
-            printf_s("\n*21. Kiểm tra chữ cái                             *");
-            printf_s("\n*22. Kiểm tra chữ số                              *");
-            printf_s("\n*23. Chuyển ký tự in hoa thành in thường          *");
-            printf_s("\n*24. Chuyển ký tự in thường thành in hoa          *");
-            printf_s("\n*25. Chữ cái kế tiếp                              *");
-            printf_s("\n*26. Số lớn số nhỏ                                *");
-            printf_s("\n*27. Tam giác hợp lệ                              *");
-            printf_s("\n*28. Kiểm tra tam giác                            *");
-            printf_s("\n*29. Chuyển đổi ngày sang tháng, năm, ngày        *");
-            printf_s("\n*30. Phương trình bậc 2                           *");
-            printf_s("\n*31. Xác định số nguyên tố                        *");
-            printf_s("\n*31. Tìm GCD (UCLN)                               *");
-            printf_s("\n*32. In ra các hình 2d với *                      *");
-            printf_s("\n***************************************************");
+            system("cls");
+            printf_s("**************************************************************");
+            printf_s("\n*1. Tính tổng, hiệu, tích, thương                            *");
+            printf_s("\n*2. Tính chu vi, diện tích hình tròn                         *");
+            printf_s("\n*3. Tính khoảng cách vecto                                   *");
+            printf_s("\n*4. Chuyển đổi đơn vị đo C và F                              *");
+            printf_s("\n*5. Tìm giá trị tuyệt đối của số nguyên                      *");
+            printf_s("\n*6. Luỹ Thừa                                                 *");
+            printf_s("\n*7. Tìm căn bậc 2                                            *");
+            printf_s("\n*8. tính tổng tăng dần Sn = 1 + 2 + 3 + ... + n              *");
+            printf_s("\n*9. Tính tổng luỹ thừa 2 tăng dần                            *");
+            printf_s("\n*10. Tính tổng tăng dần phân số                              *");
+            printf_s("\n*11. Tính Tổng nhân tăng dần                                 *");
+            printf_s("\n*12. Tính tổng luỹ thừa có âm tăng dần                       *");
+            printf_s("\n*13. Tìm số chia hết lớn nhất                                *");
+            printf_s("\n*14. Số chia hết nhỏ nhất                                    *");
+            printf_s("\n*15. Kiểm tra số chẵn lẻ                                     *");
+            printf_s("\n*16. Kiểm tra số chia hết cho 3 và 5                         *");
+            printf_s("\n*17. Kiểm tra năm nhuận                                      *");
+            printf_s("\n*18. In ra số ngày của tháng                                 *");
+            printf_s("\n*19. Kiểm tra chữ in thường                                  *");
+            printf_s("\n*20. Kiểm tra chữ in hoa                                     *");
+            printf_s("\n*21. Kiểm tra chữ cái                                        *");
+            printf_s("\n*22. Kiểm tra chữ số                                         *");
+            printf_s("\n*23. Chuyển ký tự in hoa thành in thường                     *");
+            printf_s("\n*24. Chuyển ký tự in thường thành in hoa                     *");
+            printf_s("\n*25. Chữ cái kế tiếp                                         *");
+            printf_s("\n*26. Số lớn số nhỏ                                           *");
+            printf_s("\n*27. Tam giác hợp lệ                                         *");
+            printf_s("\n*28. Kiểm tra tam giác                                       *");
+            printf_s("\n*29. Chuyển đổi ngày sang tháng, năm, ngày                   *");
+            printf_s("\n*30. Phương trình bậc 2                                      *");
+            printf_s("\n*31. Xác định số nguyên tố                                   *");
+            printf_s("\n*31. Tìm GCD (UCLN)                                          *");
+            printf_s("\n*32. In ra các hình 2d với *                                 *");
+            printf_s("\n*33. In ra list của bình phương và lập phương của số nhập vào*");
+            printf_s("\n**************************************************************");
+            printf_s("\nBạn nhập sai rồi, vui lòng nhập lại");
             printf_s("\nXin mời nhập lựa chọn = ");
             scanf_s("%d", &Choice);
             getchar();
@@ -1739,6 +1742,20 @@ int main() {
         printf_s("\n*4. Tính thương                                   *");
         printf_s("\nLựa chọn = ");
         scanf_s("%d", &Case1_Choice);
+        if (Case1_Choice <= 0 || Case1_Choice > 4)
+        {
+            while (Case1_Choice <= 0 || Case1_Choice > 4)
+            {
+                system("cls");
+                printf_s("*1. Tính tổng                                     *");
+                printf_s("\n*2. Tính hiệu                                     *");
+                printf_s("\n*3. Tính tích                                     *");
+                printf_s("\n*4. Tính thương                                   *");
+                printf_s("\nBạn nhập sai rồi, vui lòng nhập lại");
+                printf_s("\nLựa chọn = ");
+                scanf_s("%d", &Case1_Choice);
+            }
+        }
         switch (Case1_Choice)
         {
         case 1:
@@ -1768,7 +1785,6 @@ int main() {
             printf_s("Bạn chọn tính thương của n tham số");
             printf_s("Thương của các phần tử là: %.2f");
         }
-
         default:
             break;
         }
@@ -1781,6 +1797,18 @@ int main() {
         printf_s("*2. Tính diện tích hình tròn                       *");
         printf_s("Lựa chọn = ");
         scanf_s("%d", &Case2_Choice);
+        if (Case2_Choice <= 0 || Case2_Choice > 2)
+        {
+            while (Case2_Choice <= 0 || Case2_Choice > 2)
+            {
+                system("cls");
+                printf_s("*\n1. Tính chu vi hình tròn                          *");
+                printf_s("*\n2. Tính diện tích hình tròn                       *");
+                printf_s("\nBạn nhập sai rồi, vui lòng nhập lại");
+                printf_s("\nLựa chọn = ");
+                scanf_s("%d", &Case2_Choice);
+            }
+        }
         switch (Case2_Choice)
         {
         case 1:
@@ -2019,6 +2047,7 @@ int main() {
     }
     case 32:
     {
+        int Case32_Choice;
         system("cls");
         printf_s("Bạn chọn In ra hình 2d với *");
         printf_s("\n*1. In hình chữ nhật                              *");
@@ -2033,9 +2062,54 @@ int main() {
         printf_s("\n*10. In hình tam giác sát phải ngược              *");
         printf_s("\n*11. In hình mũi tên (Still Developing)           *");
         printf_s("\n*12. In hình thoi (Still Developing)              *");
-        int Case32_Choice;
         printf_s("\nNhập lựa chọn: ");
         scanf_s("%d", &Case32_Choice);
+        if (Case32_Choice <= 0 || Case32_Choice > 12)
+        {
+            while (Case32_Choice <= 0 || Case32_Choice > 12)
+            {
+                system("cls");
+                printf_s("Bạn chọn In ra hình 2d với *");
+                printf_s("\n*1. In hình chữ nhật                              *");
+                printf_s("\n*2. In hình bầu dục                               *");
+                printf_s("\n*3. In hình tam giác sát lề trái                  *");
+                printf_s("\n*4. In hình tam giác cân                          *");
+                printf_s("\n*5. In hình tam giác cân rỗng                     *");
+                printf_s("\n*6. In hình tam giác sát phải                     *");
+                printf_s("\n*7. In hình tam giác sát lề trái ngược            *");
+                printf_s("\n*8. In hình tam giác cân ngược                    *");
+                printf_s("\n*9. In hình tam giác cân rỗng ngược               *");
+                printf_s("\n*10. In hình tam giác sát phải ngược              *");
+                printf_s("\n*11. In hình mũi tên (Still Developing)           *");
+                printf_s("\n*12. In hình thoi (Still Developing)              *");
+                printf_s("\nBạn nhập sai rồi, vui lòng nhập lại");
+                printf_s("\nNhập lựa chọn: ");
+                scanf_s("%d", &Case32_Choice);
+                if (Case32_Choice == 11 || Case32_Choice == 12)
+                {
+                    while (Case32_Choice == 11 || Case32_Choice == 12)
+                    {
+                        system("cls");
+                        printf_s("Bạn chọn In ra hình 2d với *");
+                        printf_s("\n*1. In hình chữ nhật                              *");
+                        printf_s("\n*2. In hình bầu dục                               *");
+                        printf_s("\n*3. In hình tam giác sát lề trái                  *");
+                        printf_s("\n*4. In hình tam giác cân                          *");
+                        printf_s("\n*5. In hình tam giác cân rỗng                     *");
+                        printf_s("\n*6. In hình tam giác sát phải                     *");
+                        printf_s("\n*7. In hình tam giác sát lề trái ngược            *");
+                        printf_s("\n*8. In hình tam giác cân ngược                    *");
+                        printf_s("\n*9. In hình tam giác cân rỗng ngược               *");
+                        printf_s("\n*10. In hình tam giác sát phải ngược              *");
+                        printf_s("\n*11. In hình mũi tên (Still Developing)           *");
+                        printf_s("\n*12. In hình thoi (Still Developing)              *");
+                        printf_s("\nBạn nhập lựa chọn còn đang phát triển, vui lòng nhập lại");
+                        printf_s("\nNhập lựa chọn: ");
+                        scanf_s("%d", &Case32_Choice);
+                    }
+                }
+            }
+        }
         switch (Case32_Choice)
         {
         case 1:
@@ -2117,7 +2191,6 @@ int main() {
             printf_s("\n");
             Print_Triangle_Right_Rotate_Down();
         }
-        
         default:
             break;
         }
@@ -3044,4 +3117,3 @@ void Print_Triangle_Right_Rotate_Down(){
     }
     
 }
-//test
