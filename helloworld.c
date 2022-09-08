@@ -2302,7 +2302,7 @@ float Perimeter_Circle(){
     {
         printf_s("Bạn nhập bán kính âm rồi, vui lòng nhập lại");
         printf_s("\nNhập bán kính: ");
-        scanf_s('%f', &r);
+        scanf_s("%f", &r);
     }
     float Perimeter_Circle = 2*r*pi;
     return Perimeter_Circle;
@@ -2316,7 +2316,7 @@ float Area_Circle(){
     {
         printf_s("Bạn nhập bán kính âm rồi, vui lòng nhập lại");
         printf_s("\nNhập bán kính: ");
-        scanf_s('%f', &r);
+        scanf_s("%f", &r);
     }
     float Area_Circle = pow(r, 2)*pi;
     return Area_Circle;
