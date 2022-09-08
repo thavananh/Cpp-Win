@@ -2272,7 +2272,7 @@ float Multiplecation(){
         while (n > 255 || n < 0)
         {
             printf("Bạn nhập sai rồi, vui lòng nhập lại");
-            printf("Nhập số tham số (Max = 255): ");
+            printf("\nNhập số tham số (Max = 255): ");
             scanf_s("%d", &n);
         }
     }
@@ -2295,17 +2295,29 @@ float Multiplecation(){
 }
 
 float Perimeter_Circle(){
-    printf_s("Nhập bán kính: ");
     float r;
+    printf_s("Nhập bán kính: ");
     scanf_s("%f", &r);
+    if (r < 0)
+    {
+        printf_s("Bạn nhập bán kính âm rồi, vui lòng nhập lại");
+        printf_s("\nNhập bán kính: ");
+        scanf_s('%f', &r);
+    }
     float Perimeter_Circle = 2*r*pi;
     return Perimeter_Circle;
 }
 
 float Area_Circle(){
-    printf_s("Nhập bán kính: ");
     float r;
+    printf_s("Nhập bán kính: ");
     scanf_s("%f", &r);
+    if (r < 0)
+    {
+        printf_s("Bạn nhập bán kính âm rồi, vui lòng nhập lại");
+        printf_s("\nNhập bán kính: ");
+        scanf_s('%f', &r);
+    }
     float Area_Circle = pow(r, 2)*pi;
     return Area_Circle;
 }
@@ -2319,6 +2331,17 @@ float Distance(){
     float y2;
     printf_s("Nhập B(x, y): ");
     scanf_s("%f %f", &x2, &y2);
+    if (x1, x2, y1, y2 < -pow(10,6) || x1, x2, y1, y2 > pow(10, 6))
+    {
+        while (x1, x2, y1, y2 < -pow(10,6) || x1, x2, y1, y2 > pow(10, 6))
+        {
+            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+            printf_s("\nNhập A(x, y): ");
+            scanf_s("%f %f", &x1, y1);
+            printf_s("Nhập B(x, y): ");
+            scanf_s("%f %f", &x2, &y2);
+        }
+    }
     float Distance = sqrt((pow((x2 - x1), 2)) + (pow((y2 - y1), 2)));
     return Distance;
 }
@@ -2327,6 +2350,11 @@ float C_To_F(){
     float C;
     printf_s("Nhập độ C: ");
     scanf_s("%f", &C);
+    if (C < 0 || C > pow(10, 6))
+    {
+        printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+        scanf_s("%f", &C);
+    }
     float C_To_F = (C*9/5) + 32;
     return C_To_F;
 }
@@ -2335,7 +2363,13 @@ float Absolute_Value(){
     float Orginal_Value;
     printf_s("Nhập số cần tìm: ");
     scanf_s("%f", &Orginal_Value);
-
+    if (Orginal_Value < -pow(10, 9) || Orginal_Value > pow(10, 9))
+    {
+        printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+        printf_s("\nNhập số cần tìm: ");
+        scanf_s("%f", &Orginal_Value);
+    }
+    return abs(Orginal_Value); 
 }
 
 float Power(){
@@ -2343,8 +2377,16 @@ float Power(){
     float n;
     printf_s("Nhập số cần tìm: ");
     scanf_s("%f", &Original_Value);
-    printf_s("Nhập luỹ thừa bạn muốn tìm: ");
+    printf_s("Nhập luỹ thừa bạn muốn: ");
     scanf_s("%f", &n);
+    if (Original_Value < -10 || n > 10)
+    {
+        printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+        printf_s("\nNhập số cần tìm: ");
+        scanf_s("%f", &Original_Value);
+        printf_s("Nhập luỹ thừa bạn muốn: ");
+        scanf_s("%f", &n);
+    }
     float Power = pow(Original_Value, n);
     return Power;
 }
@@ -2356,6 +2398,12 @@ float N_Root(){
     scanf_s("%f", &Original_Value);
     printf("Nhập căn bậc n: ");
     scanf_s("%f", &n);
+    if (Original_Value < 0 || Original_Value > pow(10, 18))
+    {
+        printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+        printf_s("\nNhập số cần tìm: ");
+        scanf_s("%d", &Original_Value);
+    }
     float N_Root = pow(Original_Value, 1/n);
     return N_Root;
 }
@@ -2365,10 +2413,20 @@ float Sum_N_Plus_One(){
     float sum = 0;
     printf_s("Nhập n:  ");
     scanf_s("%d", &n);
+    if (n < 0 || n > pow(10, 8))
+    {
+        while (n < 0 || n > pow(10, 8))
+        {
+            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+            printf_s("\nNhập n: ");
+            scanf_s("%d", &n);
+        }
+    }
     for (size_t i = 1; i < n; i++)
     {
         sum = sum + i;
     }
+    return sum;
 }
 
 float Sum_N_Pow_Two(){
@@ -2376,6 +2434,12 @@ float Sum_N_Pow_Two(){
     float sum = 0;
     printf_s("Nhập n: ");
     scanf_s("%d", &n);
+    if (n < 0 || n > pow(10, 5))
+    {
+        printf_s("Bạn nhập sai rồi, vui lòng nhập lại: ");
+        printf_s("\nNhập n: ");
+        scanf_s("%d", &n);
+    }
     for (size_t i = 0; i < n; i++)
     {
         sum = sum + pow(i, 2);
@@ -2388,12 +2452,20 @@ float Sum_N_Nth(){
     float sum = 0;
     printf("Nhập n: ");
     scanf_s("%d", &n);
+    if (n < 1 || n > pow(10, 5))
+    {
+        printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+        printf_s("\nNhập n: ");
+        scanf_s("%d", &n);
+    }
     for (size_t i = 0; i < n; i++)
     {
         sum = sum + 1/(n*(n+1));
     }
     return sum;
 }
+
+// Còn thiếu 2 bài. Bạn nào đụng vào code của tương lai, hãy thêm 2 bài tính tổng còn đang thiếu, lười thêm quá :()
 
 float Largest_Divisor(){
     int a;
