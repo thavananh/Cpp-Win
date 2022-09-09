@@ -1898,7 +1898,7 @@ int main() {
         system("cls");
         printf_s("Bạn chọn tính tổng Sn = 2 + 4 + 6 + 8 + ... + 2^n");
         printf_s("\n");
-        printf_s("Sn = %.2f", Sum_N_Pow_Two);
+        printf_s("Sn = %.2f", Sum_Two_Pow_N());
         break;
     }
     case 12:
@@ -1906,7 +1906,7 @@ int main() {
         system("cls");
         printf_s("Bạn chọn tính tổng Sn = -1 + 2 - 3 + 4 - 5 + 6 + .... + (-1)^n*n ");
         printf_s("\n");
-        printf_s("Sn = %.2f", Sum);
+        printf_s("Sn = %.2f", Sum_Pow_Multiple_N());
         break;
     }
     case 13:
@@ -2474,6 +2474,17 @@ float Largest_Divisor(){
     scanf_s("%d", &a);
     printf_s("Nhập b: ");
     scanf_s("%d", &b);
+    if (a < b || b < 1 || a > pow(10, 8))
+    {
+        while (a < b || b < 1 || a > pow(10, 8))
+        {
+            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+            printf_s("\nNhập a: ");
+            scanf_s("%d", &a);
+            printf_s("Nhập b: ");
+            scanf_s("%d", &b);
+        }
+    }
     int Largest_Divisor = (a/b)*b;
     return Largest_Divisor;
 }
@@ -2485,6 +2496,17 @@ float Smallest_Divisor(){
     scanf_s("%d", &a);
     printf_s("Nhập b: ");
     scanf_s("%d", &b);
+    if (a < b || b < 1 || a > pow(10, 8))
+    {
+        while (a < b || b < 1 || a > pow(10, 8))
+        {
+            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+            printf_s("\nNhập a: ");
+            scanf_s("%d", &a);
+            printf_s("Nhập b: ");
+            scanf_s("%d", &b);
+        }
+    }
     if ((float)a/b > (int)a/b)
     {
         return ((int)a/b)*b + b;
@@ -2514,7 +2536,16 @@ void Divisor_To3_Or_To5(){
     int n;
     printf_s("Nhập số bạn cần kiểm tra: ");
     scanf("%d", &n);
-    if (n % 3 == 0 && n % 5 == 0)
+    if (n < -pow(10, 18) || n > pow(10, 18))
+    {
+        while (n < -pow(10, 18) || n > pow(10, 18))
+        {
+            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+            printf_s("\nNhập số bạn cần kiểm tra: ");
+            scanf_s("%d", &n);
+        }
+    }
+    if (abs(n) % 3 == 0 && abs(n) % 5 == 0)
     {
         printf_s("True");
     }
@@ -2528,6 +2559,12 @@ void Checking_Leap_Year(){
     int n;
     printf_s("Nhập năm kiểm tra: ");
     scanf_s("%d", &n);
+    if (n < -pow(10, 6) || n > pow(10, 6))
+    {
+        printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+        printf_s("\nNhập năm cần kiểm tra");
+        scanf_s("%d", &n);
+    }
     if (n % 400 == 0 || (n % 4 == 0 && n % 100 !=0))
     {
         printf_s("Năm nhuận");
@@ -2549,7 +2586,11 @@ void Checking_How_Many_Days_In_Month(){
     scanf("%d", &month);
     printf_s("Nhập năm: ");
     scanf_s("%d", &year);
-    if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+    if (year < 0 || month < 0)
+    {
+        printf_s("INVALID");
+    }
+    else if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
     {
         switch (month)
         {
@@ -2593,12 +2634,6 @@ void Checking_How_Many_Days_In_Month(){
             break;
         }
     }
-
-    else if (year < 0)
-    {
-        printf_s("Không tồn tại năm âm");
-    }
-
     else
     {
         switch (month)
