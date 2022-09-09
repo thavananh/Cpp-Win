@@ -1608,7 +1608,7 @@ float N_Root();
 float Sum_N_Plus_One();
 float Sum_N_Pow_Two();
 float Sum_N_Nth();
-float Sum_Two_Pow_N();
+float Sum_Two_Product_N();
 float Sum_Pow_Multiple_N();
 float Largest_Divisor();
 float Smallest_Divisor();
@@ -1896,9 +1896,9 @@ int main() {
     case 11:
     {
         system("cls");
-        printf_s("Bạn chọn tính tổng Sn = 2 + 4 + 6 + 8 + ... + 2^n");
+        printf_s("Bạn chọn tính tổng Sn = 2 + 4 + 6 + 8 + ... + 2*n");
         printf_s("\n");
-        printf_s("Sn = %.2f", Sum_Two_Pow_N());
+        printf_s("Sn = %.2f", Sum_Two_Product_N());
         break;
     }
     case 12:
@@ -2461,6 +2461,49 @@ float Sum_N_Nth(){
     for (size_t i = 0; i < n; i++)
     {
         sum = sum + 1/(n*(n+1));
+    }
+    return sum;
+}
+
+float Sum_Two_Product_N(){
+    int n;
+    float sum = 0;
+    printf_s("Nhập n: ");
+    scanf_s("%d", &n);
+    if (n < 1 || n > pow(10, 9))
+    {
+        while (n < 1 || n > pow(10, 9))
+        {
+            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+            printf_s("\nNhập n: ");
+            scanf_s("%d", &n);
+        }
+    }
+    for (size_t i = 1; i <= n; i++)
+    {
+        sum = sum + 2*i;
+    }
+    return sum;
+}
+
+float Sum_Pow_Multiple_N(){
+    int n;
+    float sum = 0;
+    printf_s("Nhập n: ");
+    scanf_s("%d", &n);
+    if (n < 1 || n > pow(10, 16))
+    {
+        while (n < 1 || n > pow(10, 16))
+        {
+            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+            printf_s("\nNhập n: ");
+            scanf_s("%d", &n);
+        }
+    }
+    
+    for (size_t i = 0; i < n; i++)
+    {
+        sum = sum + pow(-1, i)*i;
     }
     return sum;
 }
