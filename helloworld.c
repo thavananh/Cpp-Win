@@ -1725,9 +1725,8 @@ int main() {
             printf_s("\nBạn nhập sai rồi, vui lòng nhập lại");
             printf_s("\nXin mời nhập lựa chọn = ");
             scanf_s("%d", &Choice);
-            getchar();
         }
-
+ 
     }
 
     switch (Choice)
@@ -1783,7 +1782,7 @@ int main() {
         {
             system("cls");
             printf_s("Bạn chọn tính thương của n tham số");
-            printf_s("Thương của các phần tử là: %.2f");
+            printf_s("Thương của các phần tử là: %.2f", Division());
         }
         default:
             break;
@@ -1813,10 +1812,10 @@ int main() {
         {
         case 1:
         {   system("cls");
-            printf_s("Bạn chọn tính chu vi hình tròn");
-            printf_s("\n");
-            printf_s("Chu vi hình tròn là: %2f", Perimeter_Circle());
-            break;
+        printf_s("Bạn chọn tính chu vi hình tròn");
+        printf_s("\n");
+        printf_s("Chu vi hình tròn là: %2f", Perimeter_Circle());
+        break;
         }
         case 2:
         {
@@ -2113,7 +2112,7 @@ int main() {
         switch (Case32_Choice)
         {
         case 1:
-        {                
+        {
             system("cls");
             printf_s("Bạn lựa chọn in hình chữ nhật");
             printf_s("\n");
@@ -2133,7 +2132,7 @@ int main() {
             system("cls");
             printf_s("Bạn lựa chọn in hình tam giác sát lề trái");
             printf_s("\n");
-            Print_Triangle_Left();   
+            Print_Triangle_Left();
             break;
         }
         case 4:
@@ -2232,7 +2231,7 @@ float Sum() {
     return sum;
 }
 
-float Subtraction(){
+float Subtraction() {
     printf("\nNhập số tham số (Max = 255): ");
     int n;
     scanf_s("%d", &n);
@@ -2263,7 +2262,7 @@ float Subtraction(){
     return Subtraction;
 }
 
-float Multiplecation(){
+float Multiplecation() {
     printf("\nNhập số tham số (Max = 255): ");
     int n;
     scanf_s("%d", &n);
@@ -2294,7 +2293,7 @@ float Multiplecation(){
     return Multiplecation;
 }
 
-float Perimeter_Circle(){
+float Perimeter_Circle() {
     float r;
     printf_s("Nhập bán kính: ");
     scanf_s("%f", &r);
@@ -2304,11 +2303,11 @@ float Perimeter_Circle(){
         printf_s("\nNhập bán kính: ");
         scanf_s("%f", &r);
     }
-    float Perimeter_Circle = 2*r*pi;
+    float Perimeter_Circle = 2 * r * pi;
     return Perimeter_Circle;
 }
 
-float Area_Circle(){
+float Area_Circle() {
     float r;
     printf_s("Nhập bán kính: ");
     scanf_s("%f", &r);
@@ -2318,11 +2317,11 @@ float Area_Circle(){
         printf_s("\nNhập bán kính: ");
         scanf_s("%f", &r);
     }
-    float Area_Circle = pow(r, 2)*pi;
+    float Area_Circle = pow(r, 2) * pi;
     return Area_Circle;
 }
 
-float Distance(){
+float Distance() {
     float x1;
     float y1;
     printf_s("Nhập A(x, y): ");
@@ -2331,9 +2330,9 @@ float Distance(){
     float y2;
     printf_s("Nhập B(x, y): ");
     scanf_s("%f %f", &x2, &y2);
-    if (x1, x2, y1, y2 < -pow(10,6) || x1, x2, y1, y2 > pow(10, 6))
+    if (x1, x2, y1, y2 < -pow(10, 6) || x1, x2, y1, y2 > pow(10, 6))
     {
-        while (x1, x2, y1, y2 < -pow(10,6) || x1, x2, y1, y2 > pow(10, 6))
+        while (x1, x2, y1, y2 < -pow(10, 6) || x1, x2, y1, y2 > pow(10, 6))
         {
             printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
             printf_s("\nNhập A(x, y): ");
@@ -2346,7 +2345,7 @@ float Distance(){
     return Distance;
 }
 
-float C_To_F(){
+float C_To_F() {
     float C;
     printf_s("Nhập độ C: ");
     scanf_s("%f", &C);
@@ -2355,11 +2354,11 @@ float C_To_F(){
         printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
         scanf_s("%f", &C);
     }
-    float C_To_F = (C*9/5) + 32;
+    float C_To_F = (C * 9 / 5) + 32;
     return C_To_F;
 }
 
-float Absolute_Value(){
+float Absolute_Value() {
     float Orginal_Value;
     printf_s("Nhập số cần tìm: ");
     scanf_s("%f", &Orginal_Value);
@@ -2369,10 +2368,10 @@ float Absolute_Value(){
         printf_s("\nNhập số cần tìm: ");
         scanf_s("%f", &Orginal_Value);
     }
-    return fabs(Orginal_Value); 
+    return fabs(Orginal_Value);
 }
 
-float Power(){
+float Power() {
     float Original_Value;
     float n;
     printf_s("Nhập số cần tìm: ");
@@ -2391,7 +2390,7 @@ float Power(){
     return Power;
 }
 
-float N_Root(){
+float N_Root() {
     float Original_Value;
     float n;
     printf_s("Nhập số cần tìm: ");
@@ -2404,11 +2403,11 @@ float N_Root(){
         printf_s("\nNhập số cần tìm: ");
         scanf_s("%d", &Original_Value);
     }
-    float N_Root = pow(Original_Value, 1/n);
+    float N_Root = pow(Original_Value, 1 / n);
     return N_Root;
 }
 
-float Sum_N_Plus_One(){
+float Sum_N_Plus_One() {
     int n;
     float sum = 0;
     printf_s("Nhập n:  ");
@@ -2429,7 +2428,7 @@ float Sum_N_Plus_One(){
     return sum;
 }
 
-float Sum_N_Pow_Two(){
+float Sum_N_Pow_Two() {
     int n;
     float sum = 0;
     printf_s("Nhập n: ");
@@ -2447,7 +2446,7 @@ float Sum_N_Pow_Two(){
     return sum;
 }
 
-float Sum_N_Nth(){
+float Sum_N_Nth() {
     int n;
     float sum = 0;
     printf("Nhập n: ");
@@ -2460,12 +2459,12 @@ float Sum_N_Nth(){
     }
     for (size_t i = 0; i < n; i++)
     {
-        sum = sum + 1/(n*(n+1));
+        sum = sum + 1 / (n * (n + 1));
     }
     return sum;
 }
 
-float Sum_Two_Product_N(){
+float Sum_Two_Product_N() {
     int n;
     float sum = 0;
     printf_s("Nhập n: ");
@@ -2481,12 +2480,12 @@ float Sum_Two_Product_N(){
     }
     for (size_t i = 1; i <= n; i++)
     {
-        sum = sum + 2*i;
+        sum = sum + 2 * i;
     }
     return sum;
 }
 
-float Sum_Pow_Multiple_N(){
+float Sum_Pow_Multiple_N() {
     int n;
     float sum = 0;
     printf_s("Nhập n: ");
@@ -2500,17 +2499,17 @@ float Sum_Pow_Multiple_N(){
             scanf_s("%d", &n);
         }
     }
-    
+
     for (size_t i = 0; i < n; i++)
     {
-        sum = sum + pow(-1, i)*i;
+        sum = sum + pow(-1, i) * i;
     }
     return sum;
 }
 
 // Còn thiếu 2 bài. Bạn nào đụng vào code của tương lai, hãy thêm 2 bài tính tổng còn đang thiếu, lười thêm quá :()
 
-float Largest_Divisor(){
+float Largest_Divisor() {
     int a;
     int b;
     printf_s("Nhập a: ");
@@ -2528,11 +2527,11 @@ float Largest_Divisor(){
             scanf_s("%d", &b);
         }
     }
-    int Largest_Divisor = (a/b)*b;
+    int Largest_Divisor = (a / b) * b;
     return Largest_Divisor;
 }
 
-float Smallest_Divisor(){
+float Smallest_Divisor() {
     int a;
     int b;
     printf_s("Nhập a: ");
@@ -2550,17 +2549,17 @@ float Smallest_Divisor(){
             scanf_s("%d", &b);
         }
     }
-    if ((float)a/b > (int)a/b)
+    if ((float)a / b > (int)a / b)
     {
-        return ((int)a/b)*b + b;
+        return ((int)a / b) * b + b;
     }
     else
     {
-        return ((int)a/b)*b;
+        return ((int)a / b) * b;
     }
-} 
+}
 
-void Even_And_Odd_Number(){
+void Even_And_Odd_Number() {
     int n;
     printf_s("Nhập số cần kiểm tra: ");
     scanf_s("%d", &n);
@@ -2572,10 +2571,10 @@ void Even_And_Odd_Number(){
     {
         printf_s("Số lẻ");
     }
-    
+
 }
 
-void Divisor_To3_Or_To5(){
+void Divisor_To3_Or_To5() {
     int n;
     printf_s("Nhập số bạn cần kiểm tra: ");
     scanf("%d", &n);
@@ -2596,9 +2595,9 @@ void Divisor_To3_Or_To5(){
     {
         printf_s("False");
     }
-    
+
 }
-void Checking_Leap_Year(){
+void Checking_Leap_Year() {
     int n;
     printf_s("Nhập năm kiểm tra: ");
     scanf_s("%d", &n);
@@ -2608,7 +2607,7 @@ void Checking_Leap_Year(){
         printf_s("\nNhập năm cần kiểm tra");
         scanf_s("%d", &n);
     }
-    if (n % 400 == 0 || (n % 4 == 0 && n % 100 !=0))
+    if (n % 400 == 0 || (n % 4 == 0 && n % 100 != 0))
     {
         printf_s("Năm nhuận");
     }
@@ -2622,7 +2621,7 @@ void Checking_Leap_Year(){
     }
 }
 
-void Checking_How_Many_Days_In_Month(){
+void Checking_How_Many_Days_In_Month() {
     int month;
     int year;
     printf_s("Nhập tháng: ");
@@ -2723,7 +2722,7 @@ void Checking_How_Many_Days_In_Month(){
     }
 }
 
-void Checking_LowerCase(){
+void Checking_LowerCase() {
     printf_s("Nhập chữ cái bạn cần kiểm tra: ");
     char letter;
     scanf_s("%c", &letter);
@@ -2737,7 +2736,7 @@ void Checking_LowerCase(){
     }
 }
 
-void Checking_UpperCase(){
+void Checking_UpperCase() {
     printf_s("Nhập chữ cái cần kiểm tra: ");
     char letter;
     scanf_s("%c", &letter);
@@ -2751,21 +2750,21 @@ void Checking_UpperCase(){
     }
 }
 
-void Checking_Letter(){
+void Checking_Letter() {
     printf_s("Nhập chữ cái cần kiểm tra: ");
     char letter;
     scanf_s("%c", &letter);
     if (((int)letter >= 65 && (int)letter <= 95) || ((int)letter >= 97 && (int)letter <= 122))
     {
-        printf("YES");
+        printf_s("YES");
     }
     else
     {
-        printf("NO");
+        printf_s("NO");
     }
 }
 
-void Checking_Number(){
+void Checking_Number() {
     printf_s("Nhập chữ số bạn cần kiểm tra: ");
     char n;
     scanf_s("%c", &n);
@@ -2779,25 +2778,25 @@ void Checking_Number(){
     }
 }
 
-void Convert_UpperCase_To_LowerCase(){
+void Convert_UpperCase_To_LowerCase() {
     printf_s("Nhập ký tự in hoa bạn cần chuyển đổi: ");
     char n;
     scanf_s("%c", &n);
     printf_s("%c", tolower(n));
 }
 
-void Convert_LowerCase_To_UpperCase(){
+void Convert_LowerCase_To_UpperCase() {
     printf_s("Nhập ký tự in thường bạn cần chuyển đổi: ");
     char n;
     scanf_s("%c", &n);
     printf_s("%c", toupper(n));
 }
 
-void GoTo_Next_Char(){
+void GoTo_Next_Char() {
     char letter;
     printf("Nhập ký tự: ");
-    scanf("%c", &letter);
-    if ((letter >= 65 && letter <= 90) || (letter >= 97 && letter <= 122 ))
+    scanf_s("%c", &letter);
+    if ((letter >= 65 && letter <= 90) || (letter >= 97 && letter <= 122))
     {
         if (letter = toupper(letter))
         {
@@ -2818,7 +2817,7 @@ void GoTo_Next_Char(){
             }
             else
             {
-            printf("%c",(letter += 1));
+                printf("%c", (letter += 1));
             }
         }
     }
@@ -2828,96 +2827,96 @@ void GoTo_Next_Char(){
     }
 }
 
-void Valid_Triangel(){
+void Valid_Triangel() {
     int a;
     int b;
     int c;
     printf("Nhập a: ");
-    scanf("%d", &a);
+    scanf_s("%d", &a);
     printf("Nhập b: ");
-    scanf("%d", &b);
-    printf("Nhập c: ");
-    scanf("%d", &c);
-    if (a, b, c < -pow(1.0*10, 1.0*6) || a, b, c > pow(1.0*10, 1.0*6))
+    scanf_s("%d", &b);
+    printf_s("Nhập c: ");
+    scanf_s("%d", &c);
+    if (a, b, c < -pow(1.0 * 10, 1.0 * 6) || a, b, c > pow(1.0 * 10, 1.0 * 6))
     {
-        while (a, b, c < -pow(1.0*10, 1.0*6) || a, b, c > pow(1.0*10, 1.0*6))
+        while (a, b, c < -pow(1.0 * 10, 1.0 * 6) || a, b, c > pow(1.0 * 10, 1.0 * 6))
         {
-            printf("Bạn nhập sai rồi, vui lòng nhập lại");
-            printf("\nNhập a: ");
-            scanf("%d", &a);
-            printf("Nhập b: ");
-            scanf("%d", &b);
-            printf("Nhập c: ");
-            scanf("%d", &c);
+            printf_s("Bạn nhập sai rồi, vui lòng nhập lại");
+            printf_s("\nNhập a: ");
+            scanf_s("%d", &a);
+            printf_s("Nhập b: ");
+            scanf_s("%d", &b);
+            printf_s("Nhập c: ");
+            scanf_s("%d", &c);
         }
     }
-    if (a+b > c && a+c > b && b+c > a)
+    if (a + b > c && a + c > b && b + c > a)
     {
         if (a == b && b == c && c == a)
         {
-            printf("Tam giác đều");
+            printf_s("Tam giác đều");
         }
         else if (a == b || b == c || c == a)
         {
-            printf("Tam giác cân");
+            printf_s("Tam giác cân");
         }
-        else if (pow(c, 2) == pow(a, 2) + pow(b, 2) || pow(b, 2) == pow(c, 2) + pow(a, 2) || pow(a, 2) == pow(b,2) + pow(c, 2))
+        else if (pow(c, 2) == pow(a, 2) + pow(b, 2) || pow(b, 2) == pow(c, 2) + pow(a, 2) || pow(a, 2) == pow(b, 2) + pow(c, 2))
         {
-            printf("Tam giác vuông");
+            printf_s("Tam giác vuông");
         }
-        else if ((pow(c, 2) == pow(a, 2) + pow(b, 2) && a == b) || (pow(b, 2) == pow(c, 2) + pow(a, 2) && c == a) || (pow(a, 2) == pow(b,2) + pow(c, 2) && b == c))
+        else if ((pow(c, 2) == pow(a, 2) + pow(b, 2) && a == b) || (pow(b, 2) == pow(c, 2) + pow(a, 2) && c == a) || (pow(a, 2) == pow(b, 2) + pow(c, 2) && b == c))
         {
-            printf("Tam giác vuông cân");
+            printf_s("Tam giác vuông cân");
         }
         else
         {
-            printf("Tam giác thường");
+            printf_s("Tam giác thường");
         }
     }
     else
     {
-        printf("INVALID");
+        printf_s("INVALID");
     }
 }
 
-void Quadratic_Equation(){
+void Quadratic_Equation() {
     float a;
     float b;
     float c;
     float delta;
     printf("Nhập a: ");
-    scanf("%f", &a);
-    printf("Nhập b: ");
-    scanf("%f", &b);
-    printf("Nhập c: ");
-    scanf("%f", &c);
-    delta = pow(b, 2) - 4*a*c;
+    scanf_s("%f", &a);
+    printf_s("Nhập b: ");
+    scanf_s("%f", &b);
+    printf_s("Nhập c: ");
+    scanf_s("%f", &c);
+    delta = pow(b, 2) - 4 * a * c;
     if (delta < 0)
     {
-        printf("Phương trình vô nghiệm");
+        printf_s("Phương trình vô nghiệm");
     }
     else if (delta == 0)
     {
-        printf("Phương trình có nghiệm kép x1 = x2 = %.2f", (-b/(2*a)));
+        printf_s("Phương trình có nghiệm kép x1 = x2 = %.2f", (-b / (2 * a)));
     }
     else
     {
-        float x1 = (-b + sqrt(delta))/(2*a);
-        float x2 = (-b - sqrt(delta))/(2*a);
-        printf("X1 = %.2f", x1);
-        printf("\nX2 = %.2f", x2);
+        float x1 = (-b + sqrt(delta)) / (2 * a);
+        float x2 = (-b - sqrt(delta)) / (2 * a);
+        printf_s("X1 = %.2f", x1);
+        printf_s("\nX2 = %.2f", x2);
     }
 }
 
-void Prime_Number(){
+void Prime_Number() {
     int n;
     int dem = 0;
     int i = 2;
-    printf("Nhập n: ");
-    scanf("%d", &n);
+    printf_s("Nhập n: ");
+    scanf_s("%d", &n);
     if (n == 2)
     {
-        printf("Số Nguyên tố");
+        printf_s("Số Nguyên tố");
     }
     else
     {
@@ -2933,28 +2932,28 @@ void Prime_Number(){
     }
     if (dem > 0)
     {
-        printf("Không phải số nguyên tố");
+        printf_s("Không phải số nguyên tố");
     }
     else
     {
-        printf("Số Nguyên Tố");
-    }    
+        printf_s("Số Nguyên Tố");
+    }
 }
 
-void GCD(){
+void GCD() {
     int a;
     int b;
     printf("Nhập a: ");
-    scanf("%d", &a);
+    scanf_s("%d", &a);
     printf("Nhập b: ");
-    scanf("%d", &b);
+    scanf_s("%d", &b);
     if (a == b)
     {
-        printf("Ước chung lớn nhất của a và b: %d", a);
+        printf_s("Ước chung lớn nhất của a và b: %d", a);
     }
     else
     {
-        while (a!= 0 && b != 0)
+        while (a != 0 && b != 0)
         {
             if (a > b)
             {
@@ -2968,12 +2967,12 @@ void GCD(){
     }
     if (a != 0)
     {
-        printf("Ước chung lớn nhất của a và b: %d", a);
+        printf_s("Ước chung lớn nhất của a và b: %d", a);
     }
     else
     {
-        printf("Ước chung lớn nhất của a và b: %d", b);
-    }   
+        printf_s("Ước chung lớn nhất của a và b: %d", b);
+    }
 }
 
 void Print_Empty_Rectangle()
@@ -3010,10 +3009,10 @@ void Print_Empty_Rectangle()
         }
         printf_s("\n");
     }
-    
+
 }
 
-void Print_Empty_Oval(){
+void Print_Empty_Oval() {
     int height;
     int width;
     printf_s("Nhập chiều ngang: ");
@@ -3046,7 +3045,7 @@ void Print_Empty_Oval(){
                     printf_s(" ");
                 }
             }
-            else if(i > 2 && i <= height - 2)
+            else if (i > 2 && i <= height - 2)
             {
                 if (j == 1 || j == width)
                 {
@@ -3070,7 +3069,7 @@ void Print_Empty_Oval(){
             }
             else if (i == height)
             {
-                
+
                 if (j > 2 && j <= width - 2)
                 {
                     printf_s("*");
@@ -3085,14 +3084,14 @@ void Print_Empty_Oval(){
     }
 }
 
-void Print_Triangle_Left(){
+void Print_Triangle_Left() {
     int height;
     printf_s("Nhập chiều dọc: ");
     scanf_s("%d", &height);
     for (size_t i = 1; i <= height; i++)
     {
-        for (size_t j = i ;j <= height; j++)
-        {   
+        for (size_t j = i; j <= height; j++)
+        {
             printf_s("*");
         }
 
@@ -3100,7 +3099,7 @@ void Print_Triangle_Left(){
     }
 }
 
-void Print_Triangle_Left_Rotate_Down(){
+void Print_Triangle_Left_Rotate_Down() {
     int height;
     printf_s("Nhập chiều dọc: ");
     scanf_s("%d", &height);
@@ -3114,7 +3113,7 @@ void Print_Triangle_Left_Rotate_Down(){
     }
 }
 
-void Print_Isosceles_Triangle(){
+void Print_Isosceles_Triangle() {
     int height;
     printf_s("Nhập chiều dọc: ");
     scanf_s("%d", &height);
@@ -3137,14 +3136,14 @@ void Print_Isosceles_Triangle(){
     }
 }
 
-void Print_Empty_Isosceles_Triangle(){
+void Print_Empty_Isosceles_Triangle() {
     int height;
     printf_s("Nhập chiều cao: ");
     scanf_s("%d", &height);
     int temp = 0;
     for (size_t i = 1; i <= height; i++)
     {
-        for (size_t j = 1; j <= height*2 - 1; j++)
+        for (size_t j = 1; j <= height * 2 - 1; j++)
         {
             if (i == 1 && j == height)
             {
@@ -3168,7 +3167,7 @@ void Print_Empty_Isosceles_Triangle(){
     }
 }
 
-void Print_Triangle_Right(){
+void Print_Triangle_Right() {
     int height;
     printf_s("Nhập chiều dọc: ");
     scanf_s("%d", &height);
@@ -3189,16 +3188,16 @@ void Print_Triangle_Right(){
     }
 }
 
-void Print_Isosceles_Triangle_Rotate_Down(){
+void Print_Isosceles_Triangle_Rotate_Down() {
     int height;
     int temp = 0;
     printf_s("Nhập chiều dọc: ");
     scanf_s("%d", &height);
     for (size_t i = 1; i <= height; i++)
     {
-        for (size_t j = 1; j <= height*2 - 1; j++)
+        for (size_t j = 1; j <= height * 2 - 1; j++)
         {
-            if (j <= temp || j > height*2 - 1 - temp)
+            if (j <= temp || j > height * 2 - 1 - temp)
             {
                 printf_s(" ");
             }
@@ -3206,21 +3205,21 @@ void Print_Isosceles_Triangle_Rotate_Down(){
             {
                 printf_s("*");
             }
-            
+
         }
         printf_s("\n");
         temp++;
     }
 }
 
-void Print_Empty_Isoceles_Triagle_Rotate_Down(){
+void Print_Empty_Isoceles_Triagle_Rotate_Down() {
     int height;
     printf_s("Nhập chiều dọc: ");
     scanf_s("%d", &height);
     int temp = height - 1;
     for (size_t i = 1; i <= height; i++)
     {
-        for (size_t j = 1; j <= height*2 - 1; j++)
+        for (size_t j = 1; j <= height * 2 - 1; j++)
         {
             if (i == 1)
             {
@@ -3244,7 +3243,7 @@ void Print_Empty_Isoceles_Triagle_Rotate_Down(){
     }
 }
 
-void Print_Triangle_Right_Rotate_Down(){
+void Print_Triangle_Right_Rotate_Down() {
     int height;
     int temp = 0;
     printf_s("Nhập chiều dọc: ");
