@@ -2369,7 +2369,7 @@ float Absolute_Value(){
         printf_s("\nNhập số cần tìm: ");
         scanf_s("%f", &Orginal_Value);
     }
-    return abs(Orginal_Value); 
+    return fabs(Orginal_Value); 
 }
 
 float Power(){
@@ -3265,5 +3265,4 @@ void Print_Triangle_Right_Rotate_Down(){
         printf_s("\n");
         temp++;
     }
-    
 }
