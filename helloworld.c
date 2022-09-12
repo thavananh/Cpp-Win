@@ -2421,7 +2421,7 @@ float Sum_N_Plus_One() {
             scanf_s("%d", &n);
         }
     }
-    for (size_t i = 1; i < n; i++)
+    for (size_t i = 0; i <= n; i++)
     {
         sum = sum + i;
     }
@@ -2439,7 +2439,7 @@ float Sum_N_Pow_Two() {
         printf_s("\nNhập n: ");
         scanf_s("%d", &n);
     }
-    for (size_t i = 0; i < n; i++)
+    for (size_t i = 0; i <= n; i++)
     {
         sum = sum + pow(i, 2);
     }
@@ -2457,7 +2457,7 @@ float Sum_N_Nth() {
         printf_s("\nNhập n: ");
         scanf_s("%d", &n);
     }
-    for (size_t i = 0; i < n; i++)
+    for (size_t i = 0; i <= n; i++)
     {
         sum = sum + 1 / (n * (n + 1));
     }
@@ -2478,7 +2478,7 @@ float Sum_Two_Product_N() {
             scanf_s("%d", &n);
         }
     }
-    for (size_t i = 1; i <= n; i++)
+    for (size_t i = 0; i <= n; i++)
     {
         sum = sum + 2 * i;
     }
@@ -2506,8 +2506,6 @@ float Sum_Pow_Multiple_N() {
     }
     return sum;
 }
-
-// Còn thiếu 2 bài. Bạn nào đụng vào code của tương lai, hãy thêm 2 bài tính tổng còn đang thiếu, lười thêm quá :()
 
 float Largest_Divisor() {
     int a;
